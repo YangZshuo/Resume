@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background: #ffffff;
-    font-family:"微軟正黑體", sans-serif;
+    font-family:"微軟正黑體";
     font-size: 16px;
 }
 
@@ -25,16 +25,12 @@ h3 {
 
 .resume {
     width: 960px;
-    background-color: cornflowerblue;
+    background-color: rgb(101, 142, 224);
+    color: #ffffff;
     margin: 20px auto;
+    box-shadow: 10px 10px black;
     position: relative;
     display: flex;
-}
-
-.resume .base,
-.resume .func {
-    box-sizing: border-box;
-    float: right;
 }
 
 .resume .base {
@@ -53,7 +49,7 @@ h3 {
 .resume .base .profile::after {
     content: "";
     position: absolute;
-    background: black;
+    background: rgb(121, 46, 46);
     width: 100%;
     height: 30px;
     bottom: -15px;
@@ -78,23 +74,115 @@ h3 {
     color: white;
 }
 
-.resume .base .profile .personality {
+.resume .base .profile .info .name {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.75em;
+    color: white;
+}
+
+.resume .base .profile .info .job {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.5em;
+    color: white;
+}
+
+.resume .base .personality {
+    line-height: 24px;
     text-align: center;
     color: white;
+    margin: 20px;
+    background-color: blue;
+}
+
+.resume .base .personality span{
+    position: relative;
 }
 
 .resume .base .interest {
+    line-height: 24px;   
     text-align: center;
     color: white;
+    margin: 20px;
+    background-color: blue;
+}
+
+.resume .base .interest i {
+    color: #ffb300;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.resume .base .interest span{
+    position: relative;
 }
 
 .resume .base .contact {
+    line-height: 24px;
     text-align: center;
     color: white;
+    margin: 20px ;
+    background-color: blue;
+}
+
+.resume .base .contact i {
+    color: #ffb300;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 15px;
+    padding-bottom: 5px;
 }
 
 .resume .func {
-    width: 200%;
-    padding: 60px;
-    color: #ffffff
+    width: 100%;
+    padding: 50px;
+}
+
+.resume .func .about{
+    background-color: blue;
+}
+
+.resume .func .cert{
+    background-color: blue;
+}
+
+.resume .func .skill,
+.resume .func .edu {
+    float: left;
+}
+
+.resume .func .skill{
+    width: 46%;
+    background-color: blue;
+    padding: 10px;
+}
+
+.resume .func .edu{
+    width: 46%;
+    background-color: blue;
+    padding: 10px;
+}
+
+.resume .func .skill ul li,
+.resume .func .edu ul li {
+    position: relative;
+    display: flex;
+    margin-left: 50px;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 8px;
+}
+
+.resume .func .skill ul {
+    margin-left: 15px;
+}
+
+.resume .func .edu ul {
+    margin-left: 15px;
 }
