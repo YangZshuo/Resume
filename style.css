@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background: #ffffff;
-    font-family:"標楷體";
+    font-family:"標楷體" ,sans-serif;
     font-size: 18px;
 }
 
@@ -16,13 +16,12 @@ ul {
 }
 
 h1{
-    font-size: 2em;
-    color: #000000;
+
 }
 
 h2 {
-    font-size: 1.7em;
-    color: #000000
+    margin: 0;
+    padding: 0;
 }
 
 h3{
@@ -40,7 +39,7 @@ h4 {
     background-color: #2c3e50;
     color: #ffffff;
     margin: 20px auto;
-    box-shadow: 10px 10px black;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     position: relative;
     display: flex;
 }
@@ -68,15 +67,21 @@ h4 {
     transform: skewY(-5deg);
 }
 
-.resume .base .profile .photo img {
-    width: 100%;
-    border-radius: 50%;
-}
-
 .resume .base .profile .photo {
+    width: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.resume .base .profile .photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .resume .base .profile .info {
@@ -87,15 +92,16 @@ h4 {
 .resume .base .profile .info .name {
     margin-top: 10px;
     margin-bottom: 0;
-    font-size: 1.75em;
-    color: white;
+    font-size: 1.1em;
+    color: black;
 }
 
 .resume .base .profile .info .job {
-    margin-top: 10px;
+    display: block;
+    margin-top: -15px;
     margin-bottom: 0;
-    font-size: 1.5em;
-    color: white;
+    font-size: 1em;
+    color: black;
 }
 
 .resume .base .personality {
@@ -107,12 +113,12 @@ h4 {
 }
 
 .resume .base .personality span{
-    position: relative;
+    font-size: 20px;
 }
 
 .resume .base .interest {
     line-height: 24px;   
-        text-align: center;
+    text-align: center;
     color: white;
     margin: 20px;
     background-color: #34495e;
@@ -128,7 +134,7 @@ h4 {
 }
 
 .resume .base .interest span{
-    position: relative;
+    font-size: 20px;
 }
 
 .resume .base .contact {
@@ -137,6 +143,12 @@ h4 {
     color: white;
     margin: 20px ;
     background-color: #34495e;
+}
+
+.resume .base .contact div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .resume .base .contact i {
@@ -150,7 +162,11 @@ h4 {
 }
 
 .resume .base .contact span{
-    position: relative;
+    font-size: 20px;
+}
+
+.resume .base .contact a {
+    color: white;
 }
 
 .resume .func {
@@ -166,9 +182,14 @@ h4 {
     background-color: #34495e;
 }
 
-.resume .func .skill,
-.resume .func .edu {
-    float: left;
+.resume .func .cert span{
+    font-size: 17.5px;
+}
+
+.resume .func .skill-edu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
 }
 
 .resume .func h4 i {
@@ -183,7 +204,6 @@ h4 {
 .resume .func .skill ul li,
 .resume .func .edu ul li {
     position: relative;
-    display: flex;
     margin-left: 50px;
     padding-left: 25px;
     padding-bottom: 15px;
@@ -191,13 +211,15 @@ h4 {
 }
 
 .resume .func .skill{
-    width: 44%;
+    width: 47.5%;
     background-color: #34495e;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .resume .func .edu{
-    width: 44%;
+    width: 47.5%;
     background-color: #34495e;
     padding: 10px;
+    box-sizing: border-box;
 }
