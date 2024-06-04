@@ -52,10 +52,11 @@ h4 {
 
 .resume .base .profile {
     background-color: #D3D3D3;
-    padding: 30px 15px 40px 15px;
-    margin: -30px -15px 45px -15px;
+    margin: -30px -15px 60px -15px;
+    padding: 30px 0px 30px 0px;
     position: relative;
 }
+
 .resume .base .profile::after {
     content: "";
     position: absolute;
@@ -203,7 +204,6 @@ h4 {
 
 .resume .func .skill ul li,
 .resume .func .edu ul li {
-    position: relative;
     margin-left: 50px;
     padding-left: 25px;
     padding-bottom: 15px;
