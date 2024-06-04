@@ -50,6 +50,7 @@ h4 {
     background-color: #34495e;
 }
 
+/* 設定profile的內外邊距 */
 .resume .base .profile {
     background-color: #D3D3D3;
     margin: -30px -15px 60px -15px;
@@ -57,7 +58,8 @@ h4 {
     position: relative;
 }
 
-.resume .base .profile::after {
+/* 使用偽元素設定一個斜線樣式 */
+.resume .base .profile::before {
     content: "";
     position: absolute;
     background: #F5F5F5;
@@ -114,7 +116,7 @@ h4 {
 }
 
 .resume .base .personality span{
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .resume .base .interest {
@@ -135,7 +137,7 @@ h4 {
 }
 
 .resume .base .interest span{
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .resume .base .contact {
@@ -149,7 +151,7 @@ h4 {
 .resume .base .contact div{
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .resume .base .contact i {
@@ -163,7 +165,7 @@ h4 {
 }
 
 .resume .base .contact span{
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .resume .base .contact a {
@@ -172,15 +174,51 @@ h4 {
 
 .resume .func {
     width: 100%;
-    padding: 30px;
+    padding: 20px;
 }
 
 .resume .func .about{
+    font-size: 20px;
     background-color: #34495e;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* 設定自傳icon的樣式 */
+.resume .func .about h4 i {
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    color: #95a5a6;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    line-height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px;
+    transition-duration: 0.3s;
 }
 
 .resume .func .cert{
+    font-size: 20px;
     background-color: #34495e;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* 設定證照icon的樣式 */
+.resume .func .cert h4 i {
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    color: #95a5a6;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    line-height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px;
+    transition-duration: 0.3s;
 }
 
 .resume .func .cert span{
@@ -193,21 +231,14 @@ h4 {
     gap: 5%;
 }
 
-.resume .func h4 i {
-    width: 42px;
-    height: 42px;
-    font-size: 32px;
-    line-height: 42px;
-    text-align: center;
-    vertical-align: middle;
-}
-
+/* 設定內文的距離 */
 .resume .func .skill ul li,
 .resume .func .edu ul li {
-    margin-left: 50px;
+    position: relative;
+    margin-left: 15px;
     padding-left: 25px;
     padding-bottom: 15px;
-    margin-bottom: 8px;
+    font-size: 20px;
 }
 
 .resume .func .skill{
@@ -217,9 +248,111 @@ h4 {
     box-sizing: border-box;
 }
 
+/* 設定學習經驗icon的樣式 */
+.resume .func .skill h4 i {
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    color: #95a5a6;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 5px;
+    transition-duration: 0.3s;
+}
+
 .resume .func .edu{
     width: 47.5%;
     background-color: #34495e;
     padding: 10px;
     box-sizing: border-box;
+}
+
+/* 設定教育經歷icon的樣式 */
+.resume .func .edu h4 i {
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    color: #95a5a6;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 5px;
+    transition-duration: 0.3s;
+}
+
+/* 設定before和after元素 */
+/* 因沒有要設定內容所以content為"" */
+/* 設定為block塊級元素就可調整寬高並應用margin或padding */
+/* 使用position設定後面可用top left之類的調整 */
+.resume .func .skill ul li::before,
+.resume .func .skill ul li::after,
+.resume .func .edu ul li::before,
+.resume .func .edu ul li::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+/* 設定before的樣式為小圓點 */
+.resume .func .skill ul li::before,
+.resume .func .edu ul li::before {
+    width: 7px;
+    height: 7px;
+    border: 3px solid white;
+    background: #ffb300;
+    border-radius: 50%;
+    left: 1px;
+    z-index: 1;
+}
+
+/* 設定after的樣式為垂直線 */
+.resume .func .skill ul li::after,
+.resume .func .edu ul li::after {
+    width: 3px;
+    height: 100%;
+    background: white;
+    left: 5px;
+    top: 0;
+}
+
+/* 設定before第一個小圓點的樣式 */
+.resume .func .skill ul li:first-of-type::before,
+.resume .func .edu ul li:first-of-type::before {
+    width: 10px;
+    height: 10px;
+    left: -1px;
+    top: -1px;
+}
+
+/* 設定最後一個項目的底部內邊距 */
+.resume .func .skill ul li:last-of-type,
+.resume .func .edu ul li:last-of-type {
+    padding-bottom: 7px;
+}
+
+/* 當鼠標停在span元素的時候變更顏色 */
+.resume .func .edu ul li:hover span,
+.resume .func .skill ul li:hover span {
+    color: #fdd835;
+}
+
+/* 設定當鼠標停在列表上的時候會有名為circle的動畫效果 */
+.resume .func .edu ul li:hover::before,
+.resume .func .skill ul li:hover::before {
+    animation: circle 1.2s infinite;
+}
+
+/* 設定circle的動畫效果 */
+@keyframes circle {
+    from {
+    box-shadow: 0 0 0 0px yellow;
+    }
+    to {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+    }
 }
