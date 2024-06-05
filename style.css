@@ -186,13 +186,13 @@ h4 {
 
 /* 設定自傳icon的樣式 */
 .resume .func .about h4 i {
-    font-size: 30px;
-    width: 60px;
-    height: 60px;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
     color: #95a5a6;
     border-radius: 50%;
     background-color: #F5F5F5;
-    line-height: 60px;
+    line-height: 50px;
     text-align: center;
     vertical-align: middle;
     margin: 10px;
@@ -200,7 +200,7 @@ h4 {
 }
 
 .resume .func .cert{
-    font-size: 20px;
+    font-size: 10x;
     background-color: #34495e;
     margin-bottom: 20px;
     padding: 10px;
@@ -208,21 +208,23 @@ h4 {
 
 /* 設定證照icon的樣式 */
 .resume .func .cert h4 i {
-    font-size: 30px;
-    width: 60px;
-    height: 60px;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
     color: #95a5a6;
     border-radius: 50%;
     background-color: #F5F5F5;
-    line-height: 60px;
+    line-height: 50px;
     text-align: center;
     vertical-align: middle;
     margin: 10px;
     transition-duration: 0.3s;
 }
 
-.resume .func .cert span{
+.resume .func .cert ul {
     font-size: 17.5px;
+    margin: 0;
+    padding: 0;
 }
 
 .resume .func .skill-edu{
@@ -259,7 +261,7 @@ h4 {
     line-height: 50px;
     text-align: center;
     vertical-align: middle;
-    margin: 5px;
+    margin: 10px;
     transition-duration: 0.3s;
 }
 
@@ -281,7 +283,7 @@ h4 {
     line-height: 50px;
     text-align: center;
     vertical-align: middle;
-    margin: 5px;
+    margin: 10px;
     transition-duration: 0.3s;
 }
 
@@ -355,4 +357,19 @@ h4 {
     to {
     box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
     }
+}
+
+/* 所有func裡的div應用屬性 */
+.resume .func:hover > div {
+    transition-duration: 0.5s;
+}
+
+/* icon在游標放置時放大1.25倍 */
+.resume .func:hover > div:hover h4 i {
+    transform: scale(1.25);
+}
+
+/* 未被游標放置的div透明度降低 */
+.resume .func:hover > div:not(:hover) {
+    opacity: 0.5;
 }
