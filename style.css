@@ -19,16 +19,6 @@ body {
     padding: 0;
 }
 
-.resume .func .cert ul{
-    list-style-position: inside;
-    list-style-type: circle;
-}
-
-.resume .func .cert .list {
-    text-indent: -25px;
-    padding-left: 30px;
-}
-
 h2 {
     margin: 0;
     padding: 0;
@@ -88,7 +78,7 @@ h4 {
 .resume .base .profile {
     background-color: #D3D3D3;
     margin: -30px -15px 60px -15px;
-    padding: 30px 0px 30px 0px;
+    padding: 30px 0px;
     position: relative;
 }
 
@@ -208,7 +198,7 @@ h4 {
 
 .resume .func {
     width: 100%;
-    padding: 20px;
+    margin: 20px;
 }
 
 .resume .func .about{
@@ -255,10 +245,17 @@ h4 {
     transition-duration: 0.3s;
 }
 
-.resume .func .cert ul {
+.resume .func .cert ul{
+    list-style-position: inside;
+    list-style-type: circle;
     font-size: 17.5px;
     margin: 0;
     padding: 0;
+}
+
+.resume .func .cert .list {
+    text-indent: -25px;
+    padding-left: 30px;
 }
 
 .resume .func .skill-edu{
